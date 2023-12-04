@@ -1,0 +1,252 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"layout": {
+			"contentSize": "1200px",
+			"wideSize": "1200px"
+		},
+		"spacing": {
+			"spacingScale": {
+				"steps": 0
+			},
+			"spacingSizes": [
+				{
+					"name": "1",
+					"size": "1rem",
+					"slug": "10"
+				},
+				{
+					"name": "2",
+					"size": "min(1.5rem, 2vw)",
+					"slug": "20"
+				},
+				{
+					"name": "3",
+					"size": "min(2.5rem, 3vw)",
+					"slug": "30"
+				},
+				{
+					"name": "4",
+					"size": "min(4rem, 5vw)",
+					"slug": "40"
+				},
+				{
+					"name": "5",
+					"size": "min(6.5rem, 8vw)",
+					"slug": "50"
+				},
+				{
+					"name": "6",
+					"size": "min(10.5rem, 13vw)",
+					"slug": "60"
+				}
+			],
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
+		},
+		"typography": {
+			"fluid": true,
+			"fontFamilies": [
+				{
+					"fontFamily": "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
+					"name": "System Sans-serif",
+					"slug": "system-sans-serif"
+				},
+				{
+					"fontFamily": "Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
+					"name": "System Serif",
+					"slug": "system-Serif"
+				},
+				{
+					"fontFamily": "Lato",
+					"slug": "lato",
+					"fontFace": [
+						{
+							"fontFamily": "Lato",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/Lato/lato_normal_400.ttf"
+							]
+						},
+						{
+							"fontFamily": "Lato",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/Lato/lato_normal_700.ttf"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "TeXGyreAdventor",
+					"slug": "texgyreadventor",
+					"fontFace": [
+						{
+							"fontFamily": "TeXGyreAdventor",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"src": [
+								"file:./assets/fonts/TexGyreAdventor/texgyreadventor_normal_700.ttf"
+							]
+						}
+					]
+				}
+			],
+			"fontSizes": [
+				{
+                    "name": "Small",
+					"slug": "small",
+					"size": "0.833rem",
+					"fluid": {
+                        "min": "0.833rem",
+                        "max": "1.rem"
+                    }
+				},
+				{
+                    "name": "Medium",
+					"slug": "medium",
+					"size": "1rem",
+					"fluid": {
+                        "min": "1rem",
+                        "max": "1.2rem"
+                    }
+				},
+                {
+                    "name": "Large",
+                    "slug": "large",
+                    "size": "1.2rem",
+                    "fluid": {
+                        "min": "1.2rem",
+                        "max": "1.44rem"
+                    }
+                },
+                {
+                    "name": "X Large",
+                    "slug": "x-large",
+                    "size": "1.44rem",
+                    "fluid": {
+                        "min": "1.44rem",
+                        "max": "1.728rem"
+                    }
+                },
+                {
+                    "name": "2X Large",
+                    "slug": "xx-large",
+                    "size": "1.728rem",
+                    "fluid": {
+                        "min": "1.728rem",
+                        "max": "2.074rem"
+                    }
+                },
+                {
+                    "name": "3X Large",
+                    "slug": "xxx-large",
+                    "size": "2.074rem",
+                    "fluid": {
+                        "min": "2.074rem",
+                        "max": "2.488rem"
+                    }
+                },
+                {
+                    "name": "4X Large",
+                    "slug": "xxxx-large",
+                    "size": "2.488rem",
+                    "fluid": {
+                        "min": "2.488rem",
+                        "max": "2.986rem"
+                    }
+                }
+			],
+			"writingMode": true
+		},
+		"useRootPaddingAwareAlignments": true
+	},
+	"styles": {
+		"elements": {
+			"caption": {
+				"color": {
+					"text": "var(--wp--preset--color--contrast-2)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--body)",
+					"fontSize": "var(--wp--preset--font-size--small)"
+				}
+			},
+			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--contrast)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "700",
+					"lineHeight": "1.2"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--xxxx-large)",
+					"lineHeight": "2"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--xxx-large)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--xx-large)"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--x-large)"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--large)"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--medium)"
+				}
+			},
+			"link": {
+				":hover": {
+					"typography": {
+						"textDecoration": "none"
+					}
+				},
+				"color": {
+					"text": "var(--wp--preset--color--contrast)"
+				}
+			}
+		},
+		"spacing": {
+			"blockGap": "2rem",
+			"padding": {
+				"left": "var(--wp--preset--spacing--50)",
+				"right": "var(--wp--preset--spacing--50)"
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--body)",
+			"fontSize": "var(--wp--preset--font-size--medium)",
+			"fontStyle": "normal",
+			"fontWeight": "400",
+			"lineHeight": "1.6"
+		}
+	}
+}
