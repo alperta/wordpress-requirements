@@ -47,7 +47,7 @@ At the time of writing, the `theme.json` contains custom directives for:
 
 Please note that the `theme.json` file is not yet complete, and should be udpated with the missing directives.
 
-**Also, please declare variables in the `theme.json` file, and use them accordingly wheneever possible.**
+**Also, please declare variables in the `theme.json` file, and use them accordingly whenever possible.**
 
 
 # Blocks
@@ -88,7 +88,7 @@ The blocks we expect to use are:
 - core/site-logo
 - core/site-title
 - core/site-tagline
-and all blocks related to the query loop (title, content, excerpt, featured image, etc.)
+- and all blocks related to the query loop (title, content, excerpt, featured image, etc.)
 
 
 ## Spectra
@@ -108,22 +108,45 @@ and all blocks related to the query loop (title, content, excerpt, featured imag
 
 
 # Custom template parts, templates and patterns
+To create template parts, templates and patterns, the easiest way is to **create and style them using the site editor**, and then copy the code from the generated blocks to the appropriate files.
 
 ## Template Parts
 Template parts are used to create reusable page parts of the website.
 
 Here are the custom template parts that need to be created:
-- Header
-    - Logo
+
+
+### Header
+In order to create the header for the website following the homepage design shown during the December 11, 2023 meeting (floating menu over a header image), we could implement the following:
+
+
+#### A template part for the homepage header (with a static image)
+This template part could be made of a cover block with the static image, encapsulating:
+- the actual menu bar (which is a synced pattern) - **see patterns/ab-header-menu.php**
+- a group block containing:
+    - a core/heading block (h2 / subheading)
+    - a core/heading block (h1 / heading)
+    - a core/pargraph block (text)
+    - a core/buttons block (button / CTA)
+
+A starter template can be found in /part/header-homepage.php
+
+Please note the `<!-- wp:block {"ref":123} /-->` block in the code. This the synced pattern for the header menu. Please make sure to replace the `123` with the actual ID of the synced pattern.
+
+#### a template part for all other pages of the website (with a color background or the featured image)
+This usage of color or featured image is part of the standard core/cover block
+
+A technical implementation will be provided as soon as possible.
+
+
+### Footer
+- Level 1
+    - Logo and info
     - Navigation
-- Footer
-    - Level 1
-        - Logo and info
-        - Navigation
-        - Contact
-    - Level 2
-        - Legal pages
-        - Copyright
+    - Contact
+- Level 2
+    - Legal pages
+    - Copyright
 
 
 ## Templates
@@ -161,6 +184,7 @@ Here are the patterns that need to be created:
 - Clients list
     - Heading
     - List of logos (2 lines of 2x3 logos on desktop, 4 lines of 3 logos on tablet and mobile)
+- Header menu (synced) - will be used in all templates and templates part, see /patterns/ab-header-menu.php for a starter template
 - FAQ - see /patterns/ab-faq.php for a starter template
 - Slider - see /patterns/ab-slider.php for a starter template
 - Stats - see /patterns/ab-stats.php for a starter template
